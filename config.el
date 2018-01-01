@@ -53,6 +53,9 @@
      :n "h" help-map
      :desc "Bing Dict" :nv "b" #'bing-dict-brief)
 
+   (:desc "window" :prefix "w"
+     :desc "Max Window" :n "m" #'delete-other-windows)
+
    ))
 
 (map!
