@@ -56,11 +56,12 @@
    (:desc "window" :prefix "w"
      :desc "Max Window" :n "m" #'delete-other-windows)
 
-   ))
+   )
 
-(map!
  (:after org
    (:map org-mode-map
+     :nv "C-e" #'evil-end-of-visual-line
      :nv "j" #'evil-next-visual-line
      :nv "k" #'evil-previous-visual-line))
+
  )

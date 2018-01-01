@@ -1,5 +1,7 @@
 ;;; private/stella/init.el -*- lexical-binding: t; -*-
 
+(toggle-frame-maximized)
+
 (def-package-hook! doom-themes :disable)
 
 (def-package! fcitx
