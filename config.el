@@ -30,6 +30,15 @@
   )
 
 ;; pangu-spacing
+(def-package! pangu-spacing
+  :config
+  (global-pangu-spacing-mode 1)
+  ;; (setq pangu-spacing-real-insert-separtor t)
+  )
+
+(add-hook! org-mode
+  (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
+  )
 
 (map!
 

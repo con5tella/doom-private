@@ -2,6 +2,8 @@
 
 (toggle-frame-maximized)
 
+(nlinum-relative-mode)
+
 (def-package-hook! doom-themes :disable)
 
 (def-package! fcitx

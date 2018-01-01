@@ -5,3 +5,4 @@
 (package! bing-dict)
 (package! doom-themes :ignore t)
 (package! fcitx)
+(package! pangu-spacing)
