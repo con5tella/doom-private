@@ -66,9 +66,11 @@
                             (evil-snipe-enable-highlight)
                             (evil-snipe-enable-incremental-highlight))))))
 
-;(setq doom-font (font-spec :family "Source Code Pro" :size 16))
 
 ;; config -*- stella version
+
+;; doom fontset
+(setq doom-font (font-spec :family "Source Code Pro" :size 16))
 
 ;; set Chinese fonts not using chinese layer, same to chinese-fonts-setup, cnfonts
 (set-frame-font "Source Code Pro")
@@ -118,6 +120,7 @@
 
  :n ";" #'comment-line
  :v ";" #'comment-or-uncomment-region
+ :nv "C-e" #'evil-end-of-visual-line
  :n "C-j" #'doom/newline-and-indent
  :n "M-g" #'magit-status
  :n "f" #'evil-avy-goto-char
@@ -143,7 +146,11 @@
 
  (:after org
    (:map org-mode-map
-     :nv "C-e" #'evil-end-of-visual-line
+     :nv "j" #'evil-next-visual-line
+     :nv "k" #'evil-previous-visual-line))
+
+ (:after latex
+   (:map LaTeX-mode-map
      :nv "j" #'evil-next-visual-line
      :nv "k" #'evil-previous-visual-line))
 
