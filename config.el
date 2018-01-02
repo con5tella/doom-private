@@ -14,6 +14,12 @@
   (set-fontset-font (frame-parameter nil 'font)
                     charset (font-spec :family "Source Han Sans CN" :size 20)))
 
+;; set face-attribute font, disabling in default theme
+(set-face-attribute 'font-lock-function-name-face nil :weight 'bold)
+(set-face-attribute 'font-lock-type-face nil :weight 'semi-bold :slant 'italic)
+(set-face-attribute 'font-lock-comment-face nil :slant 'italic)
+;; (set-face-attribute 'font-lock-string-face nil :foreground '"forest green")
+
 ;; ace-pinyin
 (def-package! ace-pinyin
   :config
@@ -36,9 +42,15 @@
   ;; (setq pangu-spacing-real-insert-separtor t)
   )
 
-(add-hook! org-mode
+(add-hook! (org-mode markdown-mode)
   (set (make-local-variable 'pangu-spacing-real-insert-separtor) t)
   )
+
+(add-hook! LaTeX-mode
+  (setq truncate-lines nil)  ;; truncate lines ignore words
+  )
+
+;; -*- key bindings
 
 (map!
 

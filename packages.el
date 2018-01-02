@@ -6,3 +6,4 @@
 (package! doom-themes :ignore t)
 (package! fcitx)
 (package! pangu-spacing)
+(package! solarized-theme)
