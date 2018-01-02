@@ -11,6 +11,7 @@
 (create-solarized-theme 'light 'solarized-light)
 (provide-theme 'solarized-light)
 
+;; fcitx
 (def-package! fcitx
   :config
   ;; Make sure the following comes before `(fcitx-aggressive-setup)'
