@@ -128,6 +128,7 @@
  (:leader
 
    (:desc "Previous Buffer" :nv "TAB" #'doom/previous-buffer)
+   (:desc "Clear Highlight" :n "<backspace>" #'evil-ex-nohighlight)
 
    (:desc "buffer" :prefix "b"
      :desc "Switch buffer" :n "b" #'switch-to-buffer)
