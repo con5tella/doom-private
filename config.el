@@ -99,6 +99,15 @@
   ;; (setq bing-dict-pronunciation-style 'uk)
   )
 
+;; ;; company
+;; (require 'company)
+;; (set! :company-backend '(emacs-lisp-mode) '(company-elisp company-files company-yasnippet company-dabbrev-code))
+;; (set! :company-backend '(python-mode) '(company-anaconda company-files company-yasnippet company-dabbrev-code))
+;; (set! :company-backend '(org-mode) '(company-files company-yasnippet company-dabbrev company-ispell))
+
+;; Emacs Speak Statistics
+(def-package! ess)
+
 ;; pangu-spacing
 (def-package! pangu-spacing
   :config
@@ -124,6 +133,7 @@
  :n "C-j" #'doom/newline-and-indent
  :n "M-g" #'magit-status
  :n "f" #'evil-avy-goto-char
+ ;; :n "s" #'evil-substitute
 
  (:leader
 
