@@ -106,7 +106,9 @@
 ;; (set! :company-backend '(org-mode) '(company-files company-yasnippet company-dabbrev company-ispell))
 
 ;; Emacs Speak Statistics
-(def-package! ess)
+(def-package! ess
+  (setq ess-use-auto-complete t)
+  )
 
 ;; pangu-spacing
 (def-package! pangu-spacing

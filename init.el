@@ -1,11 +1,14 @@
 ;;; private/stella/init.el -*- lexical-binding: t; -*-
 
+;; frame maximum at start
 (toggle-frame-maximized)
 
+;; line numbers relative
 (nlinum-relative-mode)
 
+;; themes
 (def-package-hook! doom-themes :disable)
-
+;; use solarized-light
 (require 'solarized)
 (deftheme solarized-light "The light variant of the Solarized colour theme")
 (create-solarized-theme 'light 'solarized-light)
